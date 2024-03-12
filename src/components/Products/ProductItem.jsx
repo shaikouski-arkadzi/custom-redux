@@ -5,13 +5,16 @@ import Card from '../UI/Card';
 import './ProductItem.css';
 import { productsActions } from '../../store/products.slice';
 import { toggle } from '../../store/products.actions';
+import { useStore } from '../../hooks-store/store';
 
 const ProductItem = props => {
-  const dispatch = useDispatch();
+  //const dispatch = useDispatch();
+  const dispatch = useStore(false)[1];
 
   const toggleFavHandler = () => {
     //dispatch(productsActions.toggle(props.id));
-    dispatch(toggle(props.id));
+    //dispatch(toggle(props.id));
+    dispatch('TOGGLE_FAV', props.id);
   };
 
   return (
