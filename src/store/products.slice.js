@@ -8,38 +8,36 @@ const productsSlice = createSlice({
         id: 'p1',
         title: 'Red Scarf',
         description: 'A pretty red scarf.',
-        isFavorite: false
+        isFavorite: false,
       },
       {
         id: 'p2',
         title: 'Blue T-Shirt',
         description: 'A pretty blue t-shirt.',
-        isFavorite: false
+        isFavorite: false,
       },
       {
         id: 'p3',
         title: 'Green Trousers',
         description: 'A pair of lightly green trousers.',
-        isFavorite: false
+        isFavorite: false,
       },
       {
         id: 'p4',
         title: 'Orange Hat',
         description: 'Street style! An orange hat.',
-        isFavorite: false
-      }
-    ]
+        isFavorite: false,
+      },
+    ],
   },
   reducers: {
     toggle(state, action) {
-      const prodIndex = state.products.findIndex(
-        p => p.id === action.payload
-      );
+      const prodIndex = state.products.findIndex(p => p.id === action.payload);
       const newFavStatus = !state.products[prodIndex].isFavorite;
       const updatedProducts = [...state.products];
       updatedProducts[prodIndex] = {
         ...state.products[prodIndex],
-        isFavorite: newFavStatus
+        isFavorite: newFavStatus,
       };
       state.products = updatedProducts;
     },

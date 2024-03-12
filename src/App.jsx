@@ -1,9 +1,9 @@
 import { Route } from 'react-router-dom';
 
 import Navigation from './components/Nav/Navigation';
-import ProductsPage from './containers/Products';
-import FavoritesPage from './containers/Favorites';
 import Counter from './containers/Counter';
+import FavoritesPage from './containers/Favorites';
+import ProductsPage from './containers/Products';
 
 const App = props => {
   return (

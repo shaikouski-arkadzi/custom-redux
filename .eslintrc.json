@@ -6,7 +6,8 @@
     
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:prettier/recommended"
     ],
     "parserOptions": {
         "ecmaVersion": "latest",
@@ -16,7 +17,18 @@
     "rules": {
         "simple-import-sort/imports": "error",
         "simple-import-sort/exports": "error",
-        "no-console": ["warn", { "allow": ["warn", "error"] }]
+        "no-console": ["warn", { "allow": ["warn", "error"] }],
+        "react/prop-types": 0,
+        "prettier/prettier": "error",
+        "react/jsx-no-useless-fragment": "warn",
+        "react/jsx-curly-brace-presence": ["warn", { "props": "never", "children": "never" }],
+        "react/jsx-boolean-value": "warn",
+        "quotes": ["error", "single", { "avoidEscape": true }],
+        "curly": ["warn", "multi"],
+        "no-implicit-coercion": "error",
+        "no-extra-boolean-cast": ["error", { "enforceForLogicalOperands": true }],
+        "no-unused-vars":"off",
+        "react/react-in-jsx-scope": "off"
       },
       "overrides": [{
         "files": ["*.js", "*.jsx", "*.ts", "*.tsx"],

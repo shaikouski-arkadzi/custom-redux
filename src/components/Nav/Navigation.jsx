@@ -9,7 +9,9 @@ const Navigation = props => {
       <nav>
         <ul>
           <li>
-            <NavLink to="/" exact>All Products</NavLink>
+            <NavLink to="/" exact>
+              All Products
+            </NavLink>
           </li>
           <li>
             <NavLink to="/favorites">Favorites</NavLink>

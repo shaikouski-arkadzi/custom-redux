@@ -1,6 +1,7 @@
 import React from 'react';
 
 import { useStore } from '../hooks-store/store';
+
 import './Counter.css';
 
 const Counter = props => {

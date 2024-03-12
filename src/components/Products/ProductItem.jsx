@@ -1,11 +1,12 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
 
-import Card from '../UI/Card';
-import './ProductItem.css';
-import { productsActions } from '../../store/products.slice';
-import { toggle } from '../../store/products.actions';
 import { useStore } from '../../hooks-store/store';
+import { toggle } from '../../store/products.actions';
+import { productsActions } from '../../store/products.slice';
+import Card from '../UI/Card';
+
+import './ProductItem.css';
 
 const ProductItem = props => {
   //const dispatch = useDispatch();
@@ -22,10 +23,7 @@ const ProductItem = props => {
       <div className="product-item">
         <h2 className={props.isFav ? 'is-fav' : ''}>{props.title}</h2>
         <p>{props.description}</p>
-        <button
-          className={!props.isFav ? 'button-outline' : ''}
-          onClick={toggleFavHandler}
-        >
+        <button className={!props.isFav ? 'button-outline' : ''} onClick={toggleFavHandler}>
           {props.isFav ? 'Un-Favorite' : 'Favorite'}
         </button>
       </div>

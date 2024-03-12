@@ -1,18 +1,19 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
 import { BrowserRouter } from 'react-router-dom';
 
-import './index.css';
-import App from './App';
-import store from './store/index';
-
-import configureProductsStore from './hooks-store/products.store';
 import configureCounterStore from './hooks-store/counter.store';
-import { Provider } from 'react-redux';
+import configureProductsStore from './hooks-store/products.store';
+import store from './store/index';
+import App from './App';
+
+import './index.css';
 
 configureProductsStore();
 configureCounterStore();
 
+// eslint-disable-next-line react/no-deprecated
 ReactDOM.render(
   <>
     {/* <Provider store={store}> */}
